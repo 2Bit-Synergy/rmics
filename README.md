@@ -22,6 +22,38 @@ python3 -m venv venv
 source venv/bin/activate
 ```
 
+### Set .env configuration
+```bash
+# For linux
+cd rmics/
+cp .env-example .env
+```
+
+```bash
+# For windows
+# if you are using a Windows command prompt (CMD)
+cd rmics/
+copy .env-example .env
+
+# or
+# if you are using PowerShell, you can use the Copy-Item cmdlet
+Copy-Item .env-example .env
+```
+Note: you need to populate the values inside example;
+```
+# App config
+APP_NAME=rmics
+SECRET_KEY="django-insecure-p!3m&cr@)34&e##10v+#$-*txnf+-!)&&@1dtr*$w^v@bm-n2)"
+DEBUG=True
+
+# Database config
+DATABASE_HOST=127.0.0.1
+DATABASE_NAME=rmics_db_v2
+DATABASE_USER=user
+DATABASE_PASS=password
+DATABASE_PORT=3306
+```
+
 ### Install dependencies
 ```bash
 cd rmics/
